@@ -7,9 +7,28 @@
 //
 
 import UIKit
+import CoreData
 
-class TableViewController: UITableViewController {
-
+class TableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+/*
+    var contentlist = [
+        [
+            "title": "this is the first one",
+            "content": "hello"
+        ],
+        [
+            "title": "this is the 2nd one",
+            "content": "hello2"
+        ],
+        [
+            "title": "this is the 3rd one",
+            "content": "hello3"
+        ]
+    ]
+*/
+    
+    var controller: NSFetchedResultsController<Article>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +37,8 @@ class TableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        fetchArticles()
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,25 +48,81 @@ class TableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
+        
+        if let sections = controller.sections {
+            return sections.count
+        }
         return 0
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        if let sections = controller.sections {
+            let sectionInfo = sections[section]
+            return sectionInfo.numberOfObjects
+        }
         return 0
     }
-
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
+        // cell.textLabel?.text = contentlist[indexPath.row]["title"]
+        // cell.cellLabel.text = contentlist[indexPath.row]["title"]
+        // cell.cellImage.image = UIImage(named: "swift.jpeg")
 
         // Configure the cell...
+        let article = controller.object(at: indexPath)
+        // cell.cellLabel.text = article.title
+        
+        cell.textLabel?.text = article.title
 
         return cell
     }
-    */
+    
+    func fetchArticles() {
+        let fetchRequest: NSFetchRequest<Article> = Article.fetchRequest()
+        let dataSort = NSSortDescriptor(key: "createdAt", ascending: false)
+        fetchRequest.sortDescriptors = [dataSort]
+        let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        
+        self.controller = controller
+        self.controller.delegate = self
+        
+        do {
+            try controller.performFetch()
+        } catch {
+            let error = error as NSError
+            print("\(error)")
+        }
+        // print ("break")
+    }
+    
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        
+        switch(type) {
+        case .insert:
+            if let indexPath = newIndexPath {
+                tableView.insertRows(at: [indexPath], with: .fade)
+            }
+            break
+        case .delete:
+            if let indexPath = indexPath {
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+        default:
+            break
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -82,14 +159,27 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "detail" {
+            let detailViewController: DetailViewController = segue.destination as! DetailViewController
+            // let indexPath = tableView.indexPathForSelectedRow?.row
+            
+            // detailViewController.titleText = contentlist[indexPath!]["title"]
+            // detailViewController.contentText = contentlist[indexPath!]["content"]
+            
+            let article = controller.object(at: tableView.indexPathForSelectedRow!)
+            // detailViewController.titleText = article.title
+            // detailViewController.contentText = article.content
+            
+            detailViewController.article = article
+        }
     }
-    */
-
+    
 }

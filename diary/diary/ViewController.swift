@@ -17,15 +17,23 @@ class ViewController: UIViewController {
     @IBOutlet weak var textArea: UITextView!
     
     // @IBOutlet weak var textLabel: UILabel!
-    @IBOutlet weak var textLabel: UILabel!
-    @IBOutlet weak var contentLabel: UILabel!
+    // @IBOutlet weak var textLabel: UILabel!
+    // @IBOutlet weak var contentLabel: UILabel!
     
-    @IBAction func buttonPressed(sender: AnyObject) {
+    @IBAction func buttonPressed(_ sender: AnyObject) {
         let text = textInput.text
-        textLabel.text = text
+        // textLabel.text = text
         
         let content = textArea.text
-        contentLabel.text = content
+        // contentLabel.text = content
+        
+        let article = Article(context: context)
+        article.title = text
+        article.content = content
+        article.createdAt = NSDate()
+        appDelegate.saveContext()
+        
+        _ = navigationController?.popViewController(animated: true)
     }
     
     override func viewDidLoad() {

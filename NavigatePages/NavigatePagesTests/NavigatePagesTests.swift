@@ -1,15 +1,15 @@
 //
-//  diaryTests.swift
-//  diaryTests
+//  NavigatePagesTests.swift
+//  NavigatePagesTests
 //
-//  Created by Scott on 15/04/2017.
+//  Created by Scott on 25/4/17.
 //  Copyright © 2017 Scott. All rights reserved.
 //
 
 import XCTest
-@testable import diary
+@testable import NavigatePages
 
-class diaryTests: XCTestCase {
+class NavigatePagesTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
