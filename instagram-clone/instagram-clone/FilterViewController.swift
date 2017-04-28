@@ -111,7 +111,7 @@ class FilterViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         return filteredImage
     }
-
+ 
     
     // MARK: UICollectionViewDelegate
     
