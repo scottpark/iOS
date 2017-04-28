@@ -12,6 +12,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var imageView: UIImageView!
     
+    var image: UIImage?
+    
     @IBAction func buttonPressed(_ sender: Any) {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
@@ -20,12 +22,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.present(imagePickerController, animated: true, completion: nil)
     }
     
-    @IBAction func filterButtonPressed(_ sender: Any) {
-        let sharakuController = SHViewController(image: imageView.image!)
-        sharakuController.delegate = self
-        self.present(sharakuController, animated: true, completion: nil)
-    }
-    
+//    @IBAction func filterButtonPressed(_ sender: Any) {
+//        let sharakuController = SHViewController(image: imageView.image!)
+//        sharakuController.delegate = self
+//        self.present(sharakuController, animated: true, completion: nil)
+//    }
+//    
     func shViewControllerImageDidFilter(image: UIImage) {
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
     }
@@ -37,6 +39,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.image = image
+            self.image = image
             self.dismiss(animated: true, completion: nil)
         }
     }
@@ -50,6 +53,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "FilterSegue" {
+            let filterViewController = segue.destination as! FilterViewController
+            filterViewController.image = image
+        }
     }
 
 

@@ -17,6 +17,9 @@
 		D22C8F161EAFE9E800781F7D /* SHViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22C8F121EAFE9E800781F7D /* SHViewController.swift */; };
 		D22C8F171EAFE9E800781F7D /* SHViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D22C8F131EAFE9E800781F7D /* SHViewController.xib */; };
 		D22C8F1A1EAFEAD200781F7D /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D22C8F191EAFEAD200781F7D /* Media.xcassets */; };
+		D22C8F1C1EB27F8200781F7D /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22C8F1B1EB27F8200781F7D /* CollectionViewController.swift */; };
+		D22C8F1E1EB2802B00781F7D /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22C8F1D1EB2802B00781F7D /* FilterViewController.swift */; };
+		D22C8F201EB28A5A00781F7D /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22C8F1F1EB28A5A00781F7D /* FilterCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		D22C8F121EAFE9E800781F7D /* SHViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHViewController.swift; sourceTree = "<group>"; };
 		D22C8F131EAFE9E800781F7D /* SHViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHViewController.xib; sourceTree = "<group>"; };
 		D22C8F191EAFEAD200781F7D /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		D22C8F1B1EB27F8200781F7D /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		D22C8F1D1EB2802B00781F7D /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		D22C8F1F1EB28A5A00781F7D /* FilterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,9 @@
 				D22C8F191EAFEAD200781F7D /* Media.xcassets */,
 				D22C8F071EAFE7AE00781F7D /* LaunchScreen.storyboard */,
 				D22C8F0A1EAFE7AE00781F7D /* Info.plist */,
+				D22C8F1B1EB27F8200781F7D /* CollectionViewController.swift */,
+				D22C8F1D1EB2802B00781F7D /* FilterViewController.swift */,
+				D22C8F1F1EB28A5A00781F7D /* FilterCell.swift */,
 			);
 			path = "instagram-clone";
 			sourceTree = "<group>";
@@ -162,10 +171,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D22C8F201EB28A5A00781F7D /* FilterCell.swift in Sources */,
+				D22C8F1E1EB2802B00781F7D /* FilterViewController.swift in Sources */,
 				D22C8F011EAFE7AE00781F7D /* ViewController.swift in Sources */,
 				D22C8EFF1EAFE7AE00781F7D /* AppDelegate.swift in Sources */,
 				D22C8F141EAFE9E800781F7D /* SHCollectionViewCell.swift in Sources */,
 				D22C8F161EAFE9E800781F7D /* SHViewController.swift in Sources */,
+				D22C8F1C1EB27F8200781F7D /* CollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +339,7 @@
 				D22C8F0F1EAFE7AE00781F7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
