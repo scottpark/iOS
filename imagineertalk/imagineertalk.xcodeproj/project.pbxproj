@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B2A17A92DA084C73A3E7B64D /* Pods_imagineertalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C39033AA18A12FEF929958 /* Pods_imagineertalk.framework */; };
+		D22C8F341EB6801700781F7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22C8F331EB6801700781F7D /* AppDelegate.swift */; };
+		D22C8F361EB6801700781F7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22C8F351EB6801700781F7D /* ViewController.swift */; };
+		D22C8F391EB6801700781F7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D22C8F371EB6801700781F7D /* Main.storyboard */; };
+		D22C8F3B1EB6801700781F7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D22C8F3A1EB6801700781F7D /* Assets.xcassets */; };
+		D22C8F3E1EB6801700781F7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D22C8F3C1EB6801700781F7D /* LaunchScreen.storyboard */; };
+		D22C8F461EB7BF6800781F7D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D22C8F451EB7BF6800781F7D /* GoogleService-Info.plist */; };
+		D22C8F4B1EB7C15700781F7D /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D22C8F471EB7C15700781F7D /* FirebaseAnalytics.framework */; };
+		D22C8F4C1EB7C15700781F7D /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D22C8F481EB7C15700781F7D /* FirebaseCore.framework */; };
+		D22C8F4D1EB7C15700781F7D /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D22C8F491EB7C15700781F7D /* FirebaseInstanceID.framework */; };
+		D22C8F4E1EB7C15700781F7D /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D22C8F4A1EB7C15700781F7D /* GoogleToolboxForMac.framework */; };
+		D2429C0D1EBA669D00567610 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2429C0C1EBA669D00567610 /* AuthViewController.swift */; };
+		D2429C0F1EBBB46800567610 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2429C0E1EBBB46800567610 /* MainViewController.swift */; };
+		D2429C111EBBBE5900567610 /* PreAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2429C101EBBBE5900567610 /* PreAuthViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4A7B51181621C6650F0E6919 /* Pods-imagineertalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagineertalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-imagineertalk/Pods-imagineertalk.release.xcconfig"; sourceTree = "<group>"; };
+		50C39033AA18A12FEF929958 /* Pods_imagineertalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_imagineertalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D22C8F301EB6801700781F7D /* imagineertalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imagineertalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D22C8F331EB6801700781F7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D22C8F351EB6801700781F7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D22C8F381EB6801700781F7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D22C8F3A1EB6801700781F7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D22C8F3D1EB6801700781F7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D22C8F3F1EB6801700781F7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D22C8F451EB7BF6800781F7D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D22C8F471EB7C15700781F7D /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		D22C8F481EB7C15700781F7D /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = "<group>"; };
+		D22C8F491EB7C15700781F7D /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		D22C8F4A1EB7C15700781F7D /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = "<group>"; };
+		D22C8F4F1EB7C21F00781F7D /* Firebase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
+		D22C8F501EB7C24400781F7D /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		D2429C0C1EBA669D00567610 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		D2429C0E1EBBB46800567610 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D2429C101EBBBE5900567610 /* PreAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreAuthViewController.swift; sourceTree = "<group>"; };
+		DC46AA1F0D5C9CB668DF0C12 /* Pods-imagineertalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagineertalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-imagineertalk/Pods-imagineertalk.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D22C8F2D1EB6801700781F7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D22C8F4C1EB7C15700781F7D /* FirebaseCore.framework in Frameworks */,
+				D22C8F4E1EB7C15700781F7D /* GoogleToolboxForMac.framework in Frameworks */,
+				D22C8F4D1EB7C15700781F7D /* FirebaseInstanceID.framework in Frameworks */,
+				D22C8F4B1EB7C15700781F7D /* FirebaseAnalytics.framework in Frameworks */,
+				B2A17A92DA084C73A3E7B64D /* Pods_imagineertalk.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5DC92135B51D766019644C0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50C39033AA18A12FEF929958 /* Pods_imagineertalk.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6051D20AD13543E3047404A6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DC46AA1F0D5C9CB668DF0C12 /* Pods-imagineertalk.debug.xcconfig */,
+				4A7B51181621C6650F0E6919 /* Pods-imagineertalk.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D22C8F271EB6801700781F7D = {
+			isa = PBXGroup;
+			children = (
+				D22C8F321EB6801700781F7D /* imagineertalk */,
+				D22C8F311EB6801700781F7D /* Products */,
+				6051D20AD13543E3047404A6 /* Pods */,
+				5DC92135B51D766019644C0F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D22C8F311EB6801700781F7D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D22C8F301EB6801700781F7D /* imagineertalk.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D22C8F321EB6801700781F7D /* imagineertalk */ = {
+			isa = PBXGroup;
+			children = (
+				D22C8F331EB6801700781F7D /* AppDelegate.swift */,
+				D22C8F351EB6801700781F7D /* ViewController.swift */,
+				D2429C0C1EBA669D00567610 /* AuthViewController.swift */,
+				D2429C0E1EBBB46800567610 /* MainViewController.swift */,
+				D2429C101EBBBE5900567610 /* PreAuthViewController.swift */,
+				D22C8F371EB6801700781F7D /* Main.storyboard */,
+				D22C8F3A1EB6801700781F7D /* Assets.xcassets */,
+				D22C8F3C1EB6801700781F7D /* LaunchScreen.storyboard */,
+				D22C8F4F1EB7C21F00781F7D /* Firebase.h */,
+				D22C8F501EB7C24400781F7D /* module.modulemap */,
+				D22C8F3F1EB6801700781F7D /* Info.plist */,
+				D22C8F451EB7BF6800781F7D /* GoogleService-Info.plist */,
+				D22C8F471EB7C15700781F7D /* FirebaseAnalytics.framework */,
+				D22C8F481EB7C15700781F7D /* FirebaseCore.framework */,
+				D22C8F491EB7C15700781F7D /* FirebaseInstanceID.framework */,
+				D22C8F4A1EB7C15700781F7D /* GoogleToolboxForMac.framework */,
+			);
+			path = imagineertalk;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D22C8F2F1EB6801700781F7D /* imagineertalk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D22C8F421EB6801700781F7D /* Build configuration list for PBXNativeTarget "imagineertalk" */;
+			buildPhases = (
+				F6B2B54B233ECF6078D7DF29 /* [CP] Check Pods Manifest.lock */,
+				D22C8F2C1EB6801700781F7D /* Sources */,
+				D22C8F2D1EB6801700781F7D /* Frameworks */,
+				D22C8F2E1EB6801700781F7D /* Resources */,
+				23383EDF473ACC67B032D93F /* [CP] Embed Pods Frameworks */,
+				74C5F640E8523E56E447FE50 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = imagineertalk;
+			productName = imagineertalk;
+			productReference = D22C8F301EB6801700781F7D /* imagineertalk.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D22C8F281EB6801700781F7D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Scott;
+				TargetAttributes = {
+					D22C8F2F1EB6801700781F7D = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D22C8F2B1EB6801700781F7D /* Build configuration list for PBXProject "imagineertalk" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D22C8F271EB6801700781F7D;
+			productRefGroup = D22C8F311EB6801700781F7D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D22C8F2F1EB6801700781F7D /* imagineertalk */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D22C8F2E1EB6801700781F7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D22C8F3E1EB6801700781F7D /* LaunchScreen.storyboard in Resources */,
+				D22C8F461EB7BF6800781F7D /* GoogleService-Info.plist in Resources */,
+				D22C8F3B1EB6801700781F7D /* Assets.xcassets in Resources */,
+				D22C8F391EB6801700781F7D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23383EDF473ACC67B032D93F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-imagineertalk/Pods-imagineertalk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74C5F640E8523E56E447FE50 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-imagineertalk/Pods-imagineertalk-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6B2B54B233ECF6078D7DF29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D22C8F2C1EB6801700781F7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D22C8F361EB6801700781F7D /* ViewController.swift in Sources */,
+				D2429C111EBBBE5900567610 /* PreAuthViewController.swift in Sources */,
+				D2429C0D1EBA669D00567610 /* AuthViewController.swift in Sources */,
+				D22C8F341EB6801700781F7D /* AppDelegate.swift in Sources */,
+				D2429C0F1EBBB46800567610 /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D22C8F371EB6801700781F7D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D22C8F381EB6801700781F7D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D22C8F3C1EB6801700781F7D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D22C8F3D1EB6801700781F7D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D22C8F401EB6801700781F7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D22C8F411EB6801700781F7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D22C8F431EB6801700781F7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC46AA1F0D5C9CB668DF0C12 /* Pods-imagineertalk.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/imagineertalk",
+				);
+				INFOPLIST_FILE = imagineertalk/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ScottPark.imagineertalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D22C8F441EB6801700781F7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A7B51181621C6650F0E6919 /* Pods-imagineertalk.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/imagineertalk",
+				);
+				INFOPLIST_FILE = imagineertalk/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ScottPark.imagineertalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D22C8F2B1EB6801700781F7D /* Build configuration list for PBXProject "imagineertalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D22C8F401EB6801700781F7D /* Debug */,
+				D22C8F411EB6801700781F7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D22C8F421EB6801700781F7D /* Build configuration list for PBXNativeTarget "imagineertalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D22C8F431EB6801700781F7D /* Debug */,
+				D22C8F441EB6801700781F7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D22C8F281EB6801700781F7D /* Project object */;
+}
